@@ -1,0 +1,21 @@
+{
+  "name": "spqr/loremipsum",
+  "version": "1.0.0",
+  "type": "pagekit-extension",
+  "title": "Lorem Ipsum Generator",
+  "description": "Generates a placeholder-text",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Roman Lossin-Beßler",
+      "homepage": "https://spqr.wtf"
+    }
+  ],
+  "extra": {
+    "icon": "icon.svg",
+    "scripts": "scripts.php"
+  },
+  "require": {
+    "joshtronic/php-loremipsum": "^1.0"
+  }
+}
