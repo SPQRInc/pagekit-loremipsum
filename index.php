@@ -41,8 +41,12 @@ return [
 	
 	'events' => [
 		
-		'view.scripts' => function ($event, $scripts) {
+		'view.scripts' => function ($event, $scripts) use ($app) {
 			$scripts->register('editor-plugin', 'loremipsum:app/bundle/editor-plugin.js', ['~editor']);
+			
+			if ($app->module('tinymce')) {
+				$scripts->register('editor-plugin-tinymce', 'loremipsum:app/bundle/editor-plugin-tinymce.js', ['~editor-plugin', '~tinymce-script']);
+			}
 		},
 	
 	],

@@ -34,6 +34,17 @@
                                 </p>
                             </div>
                         </div>
+                        <div class="uk-width-large-1-1">
+                            <div class="uk-form-row">
+                                <label for="form-wrapping" class="uk-form-label">{{ 'Wrapping' | trans }}</label>
+                                <div class="uk-form-controls">
+                                    <select id="form-wrapping" class="uk-form-width-large" v-model="text.wrapping">
+                                        <option value="">{{ 'None' | trans }}</option>
+                                        <option value="p">{{ 'Paragraph' | trans }}</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <div class="uk-modal-footer uk-text-right">
@@ -54,7 +65,8 @@ module.exports = {
         return {
             text: {
                 count: 150,
-                type: 'words'
+                type: 'words',
+                wrapping: ''
             }
         }
     },

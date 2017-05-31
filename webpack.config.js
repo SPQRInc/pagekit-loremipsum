@@ -2,7 +2,8 @@ module.exports = [
 
     {
         entry: {
-            "editor-plugin": "./app/views/admin/editor-plugin"
+            "editor-plugin": "./app/components/editor-plugin.js",
+            "editor-plugin-tinymce": "./app/components/tinymce-plugin.js"
         },
         output: {
             filename: "./app/bundle/[name].js"

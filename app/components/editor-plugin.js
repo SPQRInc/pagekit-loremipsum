@@ -35,21 +35,23 @@ module.exports = {
         openModal: function () {
             var editor = this.$parent.editor, cursor = editor.editor.getCursor();
 
-            new this.$options.utils['text-picker']({
+            new this.$parent.$options.utils['text-picker']({
                 parent: this,
                 data: {
                     text: {
                         count: 150,
-                        type: 'words'
+                        type: 'words',
+                        wrapping: ''
                     }
                 }
             })
                 .$mount()
                 .$appendTo('body')
                 .$on('select', function (text) {
-                    this.$http.get('api/loremipsum{/type}{/count}', {
+                    this.$http.get('api/loremipsum{/type}{/count}{/wrapping}', {
                         type: text.type,
-                        count: text.count
+                        count: text.count,
+                        wrapping: text.wrapping
                     }).then(function (res) {
                         editor.editor.replaceRange(res.data.content, cursor);
                     });
@@ -57,12 +59,9 @@ module.exports = {
         }
     },
 
-    components: {},
-
-    utils: {
-        'text-picker': Vue.extend(require('../../components/text-picker.vue'))
-    }
+    components: {}
 
 };
 
 window.Editor.components['editor-plugin'] = module.exports;
+window.Editor.utils['text-picker'] = Vue.extend(require('./text-picker.vue'));
