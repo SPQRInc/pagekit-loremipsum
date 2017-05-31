@@ -4,5 +4,8 @@
 	'Type'        => 'Typ',
 	'Words'       => 'Worte',
 	'Sentences'   => 'Sätze',
-	'Paragraphs'  => 'Absätze'
+	'Paragraphs'  => 'Absätze',
+	'Wrapping'    => 'HTML-Wrapping',
+	'None'        => 'Keine',
+	'Paragraph'   => 'Paragraph'
 ];

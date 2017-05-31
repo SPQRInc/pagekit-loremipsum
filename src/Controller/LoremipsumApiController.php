@@ -12,37 +12,36 @@ class LoremipsumApiController
 {
 	/**
 	 * @Route(
-	 *     "/{type}/{number}", methods="GET",
-	 *     defaults={"type": "words", "number" = 150},
+	 *     "/{type}/{number}/{wrapping}", methods="GET",
+	 *     defaults={"type": "words", "number" = 150, "wrapping" = null },
 	 *     requirements={
 	 *         "number": "\d+"
 	 *     }
 	 * )
-	 * @Request({"type": "string", "number" = "int"})
+	 * @Request({"type": "string", "number": "int", "wrapping": "string"})
 	 *
 	 *
 	 * @return array
 	 */
-	public function getAction( $type, $number )
+	public function getAction( $type, $number, $wrapping )
 	{
 		$generator = new Loremipsum();
 		
 		switch ( $type ) {
 			case 'words' :
-				$content   = $generator->words( $number );
+				$content   = $generator->words( $number, $wrapping );
 				break;
 			case 'sentences' :
-				$content   = $generator->sentences( $number );
+				$content   = $generator->sentences( $number, $wrapping );
 				break;
 			case 'paragraphs' :
-				$content   = $generator->paragraphs( $number );
+				$content   = $generator->paragraphs( $number, $wrapping );
 				break;
 			default :
-				$content   = $generator->words( $number );
+				$content   = $generator->words( $number, $wrapping );
 				break;
 		}
 		
 		return ['content' => $content];
 	}
 }
-
