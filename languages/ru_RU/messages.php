@@ -4,5 +4,8 @@
 	'Type'        => 'Тип',
 	'Words'       => 'Слов',
 	'Sentences'   => 'Предложений',
-	'Paragraphs'  => 'Параграфов'
+	'Paragraphs'  => 'Параграфов',
+	'Wrapping'    => 'HTML-обертка',
+	'None'	      => 'Нет',
+	'Paragraph'   => 'Параграф'
 ];
