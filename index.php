@@ -2,7 +2,7 @@
 
 return [
 	
-	'name' => 'loremipsum',
+	'name' => 'spqr/loremipsum',
 	
 	'type' => 'extension',
 	
@@ -33,7 +33,7 @@ return [
 	'settings' => '',
 	
 	'resources' => [
-		'loremipsum:' => ''
+		'spqr/loremipsum:' => ''
 	],
 	
 	'config' => [
@@ -42,10 +42,11 @@ return [
 	'events' => [
 		
 		'view.scripts' => function ($event, $scripts) use ($app) {
-			$scripts->register('editor-plugin', 'loremipsum:app/bundle/editor-plugin.js', ['~editor']);
+			$scripts->register('editor-loremipsum', 'spqr/loremipsum:app/bundle/editor-loremipsum.js', ['~editor']);
 			
 			if ($app->module('tinymce')) {
-				$scripts->register('editor-plugin-tinymce', 'loremipsum:app/bundle/editor-plugin-tinymce.js', ['~editor-plugin', '~tinymce-script']);
+				$scripts->register('editor-loremipsum-tinymce', 'spqr/loremipsum:app/bundle/editor-loremipsum-tinymce.js',
+				                   ['~editor-loremipsum', '~tinymce-script']);
 			}
 		},
 	

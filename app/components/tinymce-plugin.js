@@ -65,4 +65,4 @@ module.exports = {
 
 };
 
-window.Editor.components['editor-plugin'] = module.exports;
+window.Editor.components['plugin-loremipsum'] = module.exports;

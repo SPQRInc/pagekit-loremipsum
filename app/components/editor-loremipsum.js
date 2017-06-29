@@ -63,5 +63,5 @@ module.exports = {
 
 };
 
-window.Editor.components['editor-plugin'] = module.exports;
+window.Editor.components['plugin-loremipsum'] = module.exports;
 window.Editor.utils['text-picker'] = Vue.extend(require('./text-picker.vue'));
