@@ -1,6 +1,7 @@
 {
   "name": "spqr/loremipsum",
-  "version": "1.0.2",
+  "module": "spqr/loremipsum",
+  "version": "1.0.3",
   "type": "pagekit-extension",
   "title": "Lorem Ipsum Generator",
   "description": "Generates a placeholder-text",

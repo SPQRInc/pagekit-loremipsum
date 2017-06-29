@@ -1,3 +1,8 @@
+# 1.0.3
+
+- FIX: Fixed naming due to compatibility reasons
+- FIX: Updated Russian translation. Thanks again to Dmitry Aronov/Glaicer.
+
 # 1.0.2
 
 - ADD: TinyMCE-support
