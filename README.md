@@ -3,6 +3,8 @@
 ## General
 This extension adds an editor-button to a Pagekit-based website, that allows to insert blind text to the editor.
 
+**This project will no longer be maintained.**
+
 ## Installation
 Please install this extension via Pagekit's marketplace
 
